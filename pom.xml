@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.wanderley.victor</groupId>
-	<artifactId>gerenciadoralunos</artifactId>
+	<artifactId>GerenciadorAlunos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gerenciadoralunos</name>
+	<name>GerenciadorAlunos</name>
 	<description>API para fazer o gerenciamento dos alunos e atividade do módulo 1 da Mentorama</description>
 	<properties>
 		<java.version>15</java.version>
