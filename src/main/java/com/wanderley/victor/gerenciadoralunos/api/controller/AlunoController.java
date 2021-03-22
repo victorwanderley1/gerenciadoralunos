@@ -21,9 +21,12 @@ public class AlunoController {
         
     }
     
+    // Não consegui que o swagger aceitasse que o valor da variável idade voltasse a ser null 
+    //após ser utilizado algum elemento nela.
     @GetMapping
     public List<Aluno> listar(@RequestParam(required = false) String nome,
-            Integer idade){
+            @RequestParam(value = "idade", required = false, defaultValue = "0") Integer idade){
+        if (idade == 0) idade = null;
         if ((nome != null) && (idade == null)){
             return this.filtrarNome(nome);
         }
