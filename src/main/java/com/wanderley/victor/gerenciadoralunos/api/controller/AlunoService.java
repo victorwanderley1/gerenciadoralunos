@@ -96,8 +96,10 @@ public class AlunoService {
         }
     }
     
-    private Boolean isAlunoNull(final Aluno aluno){
-        return (aluno.getIdade().equals(null)) || (aluno.getNome().isBlank());
+    private void isAlunoNull(final Aluno aluno){
+        if ((aluno.getIdade().equals(null)) || (aluno.getIdade().equals(0)) 
+                || (aluno.getNome().isBlank()) || (aluno.getNome().equals(null))
+                || (aluno.getNome().equals(""))) throw new NullPointerException();
     }
     
     public Boolean deletar(Long id){
